@@ -1,9 +1,13 @@
 package com.push.demo.device;
 
-public class Wifi {
+import android.content.Context;
 
-	public Wifi() {
+public class Wifi {
+	private Context context = null;
+
+	public Wifi(Context context) {
 		// TODO Auto-generated constructor stub
+		this.context = context;
 	}
 
 }
