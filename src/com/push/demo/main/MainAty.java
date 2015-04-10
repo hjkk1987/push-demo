@@ -13,7 +13,7 @@ public class MainAty extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		mWifi = new Wifi();
+		mWifi = new Wifi(MainAty.this);
 	}
 
 	@Override
