@@ -6,14 +6,14 @@ import android.app.Activity;
 import android.os.Bundle;
 
 public class MainAty extends Activity {
-	private Wifi mWifi = null;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		mWifi = new Wifi();
+		
 	}
 
 	@Override
