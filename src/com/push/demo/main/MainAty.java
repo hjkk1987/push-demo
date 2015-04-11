@@ -16,6 +16,7 @@ public class MainAty extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mWifi = new Wifi();
+		//Ìí¼ÓÀ¶ÑÀÏîÄ¿
 		mBluetooth = new Bluetooth();
 	}
 
