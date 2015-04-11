@@ -2,6 +2,7 @@ package com.push.demo.main;
 
 import com.push.demo.device.Bluetooth;
 import com.push.demo.device.Wifi;
+import com.push.demo.view.PlayInter;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 public class MainAty extends Activity {
 	private Wifi mWifi = null;
 	private Bluetooth mBluetooth = null;
+	private PlayInter mPlay = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +18,9 @@ public class MainAty extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mWifi = new Wifi();
-		//添加蓝牙项目
+		// 添加蓝牙项目
 		mBluetooth = new Bluetooth();
+		mPlay = new PlayInter();
 	}
 
 	@Override
