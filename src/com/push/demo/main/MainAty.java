@@ -74,6 +74,7 @@ public class MainAty extends Activity {
 		// TODO Auto-generated method stub
 		super.onDestroy();
 		mWifi = null;
+		unbindService(mServiceConnection);
 	}
 
 }
