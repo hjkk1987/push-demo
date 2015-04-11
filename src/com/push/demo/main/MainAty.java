@@ -1,5 +1,6 @@
 package com.push.demo.main;
 
+import com.push.demo.device.Bluetooth;
 import com.push.demo.device.Wifi;
 
 import android.app.Activity;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 
 public class MainAty extends Activity {
 	private Wifi mWifi = null;
+	private Bluetooth mBluetooth = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +16,7 @@ public class MainAty extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mWifi = new Wifi();
-
+		mBluetooth = new Bluetooth();
 	}
 
 	@Override
