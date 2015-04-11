@@ -1,7 +1,9 @@
 package com.push.demo.main;
 
+
 import com.push.demo.app.Services;
 import com.push.demo.app.Services.ServiceBinder;
+import com.push.demo.device.Bluetooth;
 import com.push.demo.device.Wifi;
 
 import android.app.Activity;
@@ -15,15 +17,21 @@ import android.os.IBinder;
 public class MainAty extends Activity {
 	private Wifi mWifi = null;
 	private Services mServices = null;
+	private Bluetooth mBluetooth = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.activity_main);
-		mWifi = new Wifi(MainAty.this);
+		mWifi = new Wifi();
 		Intent intent = new Intent(MainAty.this, Services.class);
 		bindService(intent, mConnect, Context.BIND_AUTO_CREATE);
+
+
+		//ÃÌº”¿∂—¿œÓƒø
+		mBluetooth = new Bluetooth();
 	}
 
 	private ServiceConnection mConnect = new ServiceConnection() {
@@ -65,6 +73,7 @@ public class MainAty extends Activity {
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
+		mWifi = null;
 	}
 
 }
