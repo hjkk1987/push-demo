@@ -14,6 +14,7 @@ public class MainAty extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mWifi = new Wifi();
+
 	}
 
 	@Override
@@ -38,6 +39,7 @@ public class MainAty extends Activity {
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
+		mWifi = null;
 	}
 
 }
