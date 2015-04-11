@@ -9,10 +9,7 @@ import android.os.Bundle;
 
 public class MainAty extends Activity {
 	private Wifi mWifi = null;
-
 	private Bluetooth mBluetooth = null;
-
-
 	private PlayInter mPlay = null;
 
 	@Override
@@ -24,9 +21,6 @@ public class MainAty extends Activity {
 		mWifi = new Wifi();
 
 		//添加蓝牙项目
-		mBluetooth = new Bluetooth();
-
-		// 添加蓝牙项目
 		mBluetooth = new Bluetooth();
 		mPlay = new PlayInter();
 
